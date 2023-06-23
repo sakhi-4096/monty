@@ -41,6 +41,8 @@ void interpreter(FILE *file)
 				add(&stack);
 			else if (strcmp(opcode, "nop") == 0)
 				nop(&stack);
+			else if (strcmp(opcode, "sub") == 0)
+				sub(&stack, line_number);
 			else
 			{
 				fprintf(stderr, "Error: unknown instruction %s\n", opcode);
