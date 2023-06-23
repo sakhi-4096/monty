@@ -43,6 +43,8 @@ void interpreter(FILE *file)
 				nop(&stack);
 			else if (strcmp(opcode, "sub") == 0)
 				sub(&stack, line_number);
+			else if (strcmp(opcode, "div") == 0)
+				divv(&stack, line_number);
 			else
 			{
 				fprintf(stderr, "Error: unknown instruction %s\n", opcode);

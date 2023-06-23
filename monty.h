@@ -32,5 +32,6 @@ void add(stack_t **stack);
 void nop(stack_t **stack);
 void interpreter(FILE *file);
 void sub(stack_t **stack, unsigned int line_number);
+void divv(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
