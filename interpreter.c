@@ -55,6 +55,8 @@ void interpreter(FILE *file)
 				divv(&stack, line_number);
 			else if (strcmp(opcode, "mul") == 0)
 				mull(&stack, line_number);
+			else if (strcmp(opcode, "mod") == 0)
+				mod(&stack, line_number);
 			else
 			{
 				fprintf(stderr, "L%lu: unknown instruction %s\n", line_number, opcode);
