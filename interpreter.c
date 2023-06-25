@@ -23,13 +23,13 @@ void interpreter(FILE *file)
 
 		if (opcode != NULL)
 		{
-			if (strcmp(opcode, "push") == 0 && value_str != NULL)
+			if (strcmp(opcode, "push") == 0 ) 
 			{
 				int value;
 
-				if (!is_integer(value_str))
+				if (value_str == NULL || value_str[0] == '\0' || !is_integer(value_str))
 				{
-					fprintf(stderr, "Error: L%lu: usage: push integer\n", line_number);
+					fprintf(stderr, "L%lu: usage: push integer\n", line_number);
 					free(line);
 					free_stack(&stack);
 					exit(EXIT_FAILURE);
