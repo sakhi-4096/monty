@@ -6,16 +6,18 @@
  *
  * Return: void
  */
-void swap(stack_t **stack)
+void swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *top = *stack;
-	stack_t *next = top->next;
+	stack_t *top = NULL;
+	stack_t *next = NULL;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "Error: can't swap, stack too short\n");
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+	top = *stack;
+	next = top->next;
 
 	top->next = next->next;
 	if (next->next != NULL)
