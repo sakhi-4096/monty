@@ -69,6 +69,8 @@ void interpreter(FILE *file)
 				pstr(&stack);
 			else if (strcmp(opcode, "rotl") == 0)
 				rotl(&stack);
+			else if (strcmp(opcode, "rotr") == 0)
+				rotr(&stack);
 			else
 			{
 				fprintf(stderr, "L%lu: unknown instruction %s\n", line_number, opcode);
