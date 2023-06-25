@@ -36,5 +36,6 @@ void sub(stack_t **stack, unsigned int line_number);
 void divv(stack_t **stack, unsigned int line_number);
 bool is_integer(const char *str);
 void free_stack(stack_t **stack);
+void mul(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
