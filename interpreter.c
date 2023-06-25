@@ -17,6 +17,12 @@ void interpreter(FILE *file)
 	{
 		char *opcode = NULL, *value_str = NULL;
 
+		if (line[0] == '#') /* Check if line is a comment */
+		{
+			line_number++;
+			continue; /* Skip to the next line */
+		}
+
 		if (line[read - 1] == '\n')
 			line[read - 1] = '\0';
 		opcode = strtok(line, " "), value_str = strtok(NULL, " ");
