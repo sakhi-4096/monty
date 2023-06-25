@@ -55,7 +55,7 @@ void interpreter(FILE *file)
 				divv(&stack, line_number);
 			else
 			{
-				fprintf(stderr, "Error: L%lu: unknown instruction %s\n", line_number, opcode);
+				fprintf(stderr, "L%lu: unknown instruction %s\n", line_number, opcode);
 				free(line);
 				free_stack(&stack);
 				exit(EXIT_FAILURE);
