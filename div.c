@@ -2,7 +2,7 @@
 #include "interpreter.h"
 
 /**
- * div - divides the second top element of the stack by the top element
+ * divv - divides the second top element of the stack by the top element
  * @stack: double pointer to the top of the stack
  * @line_number: current line number being processed
  */
