@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mul - multiples second top element with the top element
+ * mull - multiples second top element with the top element
  * @stack: pointer to the stack pointer
  * @line_number: the line number of the opcode
  *

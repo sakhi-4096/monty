@@ -2,7 +2,7 @@
 #include "interpreter.h"
 
 /**
- * mod - computes the rest of the division of the second top element and top 
+ * mod - computes the rest of the division of the second top element and top
  * @stack: pointer to the top of the stack
  * @line_number: the line number of the opcode
  */
