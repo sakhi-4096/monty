@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
+#include <stdbool.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -23,7 +24,7 @@ typedef struct stack_s
 } stack_t;
 
 /* Function prototypes */
-void push(stack_t **stack, int value);
+void push(stack_t **stack, int value, unsigned int line_number);
 void pop(stack_t **stack);
 void pall(stack_t **stack);
 void pint(stack_t **stack);
@@ -33,5 +34,7 @@ void nop(stack_t **stack);
 void interpreter(FILE *file);
 void sub(stack_t **stack, unsigned int line_number);
 void divv(stack_t **stack, unsigned int line_number);
+bool is_integer(const char *str);
+void free_stack(stack_t **stack);
 
 #endif /* MONTY_H */
