@@ -25,9 +25,17 @@ void interpreter(FILE *file)
 		{
 			if (strcmp(opcode, "push") == 0 && value_str != NULL)
 			{
-				int value = atoi(value_str);
+				int value;
 
-				push(&stack, value);
+				if (!is_integer(value_str))
+				{
+					fprintf(stderr, "Error: L%lu: usage: push integer\n", line_number);
+					free(line);
+					free_stack(&stack);
+					exit(EXIT_FAILURE);
+				}
+				value = atoi(value_str);
+				push(&stack, value, line_number);
 			}
 			else if (strcmp(opcode, "pall") == 0)
 				pall(&stack);
@@ -47,11 +55,14 @@ void interpreter(FILE *file)
 				divv(&stack, line_number);
 			else
 			{
-				fprintf(stderr, "Error: unknown instruction %s\n", opcode);
+				fprintf(stderr, "Error: L%lu: unknown instruction %s\n", line_number, opcode);
+				free(line);
+				free_stack(&stack);
 				exit(EXIT_FAILURE);
 			}
 		}
 		line_number++;
 	}
 	free(line);
+	free_stack(&stack);
 }
