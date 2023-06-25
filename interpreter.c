@@ -23,7 +23,7 @@ void interpreter(FILE *file)
 
 		if (opcode != NULL)
 		{
-			if (strcmp(opcode, "push") == 0 ) 
+			if (strcmp(opcode, "push") == 0)
 			{
 				int value;
 

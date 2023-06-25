@@ -3,6 +3,7 @@
 /**
  * pint - print the value at the top of stack followed by new line
  * @stack: pointer to the stack pointer
+ * @line_number: line number of the pint operation
  *
  * Return: void
  */

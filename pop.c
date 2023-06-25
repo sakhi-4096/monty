@@ -3,6 +3,7 @@
 /**
  * pop - pops an element from the stack
  * @stack: pointer to the stack pointer
+ * @line_number: line numbe of the push operation
  *
  * Return: void
  */

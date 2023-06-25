@@ -3,6 +3,7 @@
 /**
  * swap - swaps the top two elements of the stack
  * @stack: pointer to the stack pointer
+ * @line_number: line number of the swap operation
  *
  * Return: void
  */
