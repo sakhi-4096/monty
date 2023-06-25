@@ -53,6 +53,8 @@ void interpreter(FILE *file)
 				sub(&stack, line_number);
 			else if (strcmp(opcode, "div") == 0)
 				divv(&stack, line_number);
+			else if (strcmp(opcode, "mul") == 0)
+				mul(&stack, line_number);
 			else
 			{
 				fprintf(stderr, "L%lu: unknown instruction %s\n", line_number, opcode);
